@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UI Tests Suite">
+    <test name="Game Portal Tests">
+        <packages>
+            <package name="ui.*"/>
+        </packages>
+    </test>
+</suite>
