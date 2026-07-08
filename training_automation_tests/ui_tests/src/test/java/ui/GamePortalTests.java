@@ -65,15 +65,15 @@ public class GamePortalTests {
 
     // КЕЙС 3: Проверка ссылок на скачивание CarX Drift Racing 2
 
-
-    @Test
-    @Severity(SeverityLevel.NORMAL)
-    @Description("Кейс 3: Проверка ссылок на скачивание CarX Drift Racing 2")
-    public void testCheckDownloadLinks() throws InterruptedException {  
-        mainPage.goToPCGames();
-        gamesPage.scrollToBottom();
-        gamesPage.clickGameInFooter("CarX Drift Racing 2");
-        boolean hasLinks = gamesPage.hasDownloadLinks();
-        Assert.assertTrue(hasLinks, "Отсутствуют ссылки на Google Play или App Store");
-    }
+@Test
+@Severity(SeverityLevel.NORMAL)
+@Description("Кейс 3: Проверка ссылок на скачивание CarX Drift Racing 2 (раздел Подписки)")
+public void testCheckDownloadLinks() throws InterruptedException {
+    // 1. Навести на "Подписки" и кликнуть на CarX Drift Racing 2 в подменю
+    mainPage.goToCarXDriftRacing2();
+    
+    // 2. Проверить ссылки на Google Play и App Store
+    boolean hasLinks = gamesPage.hasDownloadLinks();
+    Assert.assertTrue(hasLinks, "Отсутствуют ссылки на Google Play или App Store");
+}
 }
