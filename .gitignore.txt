@@ -1,0 +1,21 @@
+# Java
+target/
+*.log
+
+# Allure
+allure-results/
+.allure/
+
+# Python
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# System
+.DS_Store
+Thumbs.db
