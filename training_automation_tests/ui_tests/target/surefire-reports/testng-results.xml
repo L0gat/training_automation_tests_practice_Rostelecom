@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-08T15:01:16 MSK" name="Surefire suite" finished-at="2026-07-08T15:01:48 MSK" duration-ms="31687">
+    <groups>
+    </groups>
+    <test started-at="2026-07-08T15:01:16 MSK" name="Surefire test" finished-at="2026-07-08T15:01:48 MSK" duration-ms="31687">
+      <class name="ui.GamePortalTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:ui.GamePortalTests@22ef9844]" started-at="2026-07-08T15:01:16 MSK" name="setup" finished-at="2026-07-08T15:01:19 MSK" duration-ms="2591" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testCheckDownloadLinks()[pri:0, instance:ui.GamePortalTests@22ef9844]" started-at="2026-07-08T15:01:19 MSK" name="testCheckDownloadLinks" finished-at="2026-07-08T15:01:23 MSK" duration-ms="4107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckDownloadLinks -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:ui.GamePortalTests@22ef9844]" started-at="2026-07-08T15:01:23 MSK" name="teardown" finished-at="2026-07-08T15:01:23 MSK" duration-ms="112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:ui.GamePortalTests@22ef9844]" started-at="2026-07-08T15:01:23 MSK" name="setup" finished-at="2026-07-08T15:01:25 MSK" duration-ms="1841" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testCheckMinRequirements()[pri:0, instance:ui.GamePortalTests@22ef9844]" started-at="2026-07-08T15:01:25 MSK" name="testCheckMinRequirements" finished-at="2026-07-08T15:01:37 MSK" duration-ms="12424" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckMinRequirements -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:ui.GamePortalTests@22ef9844]" started-at="2026-07-08T15:01:37 MSK" name="teardown" finished-at="2026-07-08T15:01:37 MSK" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:ui.GamePortalTests@22ef9844]" started-at="2026-07-08T15:01:37 MSK" name="setup" finished-at="2026-07-08T15:01:39 MSK" duration-ms="2132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testSearchGameAndCheckPrice()[pri:0, instance:ui.GamePortalTests@22ef9844]" started-at="2026-07-08T15:01:39 MSK" name="testSearchGameAndCheckPrice" finished-at="2026-07-08T15:01:47 MSK" duration-ms="7863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchGameAndCheckPrice -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:ui.GamePortalTests@22ef9844]" started-at="2026-07-08T15:01:47 MSK" name="teardown" finished-at="2026-07-08T15:01:48 MSK" duration-ms="419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- ui.GamePortalTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

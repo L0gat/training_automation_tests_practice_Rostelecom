@@ -1,0 +1,4 @@
+pages\BasePage.class
+config\WebDriverConfig.class
+pages\GamesPage.class
+pages\MainPage.class
