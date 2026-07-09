@@ -1,7 +1,6 @@
 import allure
 import pytest
 
-
 @allure.epic("API Тесты")
 @allure.feature("Сервис сотрудников")
 class TestEmployees:
@@ -35,7 +34,6 @@ class TestEmployees:
     def test_get_employee_positive(self, api_client, created_employee_id):
         """Позитивный тест: получение сотрудника по ID"""
         response = api_client.get(f"/api/employees/{created_employee_id}")
-        
         assert response.status_code == 200
         assert response.json()["id"] == created_employee_id
         assert "name" in response.json()
@@ -80,27 +78,20 @@ class TestEmployees:
         Позитивный тест: PATCH с salary.
         Поле name обязательно даже в PATCH-запросе.
         """
-        # 1. Получаем текущие данные сотрудника
         get_response = api_client.get(f"/api/employees/{created_employee_id}")
         assert get_response.status_code == 200
         original = get_response.json()
-        
-        # 2. Отправляем PATCH с salary и name (обязательное поле)
         new_salary = 999999
         patch_data = {
-            "name": original["name"],  # обязательно!
+            "name": original["name"],  
             "salary": new_salary
         }
         patch_response = api_client.patch(f"/api/employees/{created_employee_id}", json=patch_data)
-        
-        # 3. Проверяем статус
         assert patch_response.status_code == 200
         
-        # 4. Проверяем, что зарплата обновилась
         updated = patch_response.json()
         assert updated["salary"] == new_salary
         
-        # 5. Проверяем, что остальные поля не изменились
         assert updated["name"] == original["name"]
         assert updated["email"] == original["email"]
         assert updated["position"] == original["position"]
@@ -142,14 +133,14 @@ class TestEmployees:
             assert "salary" in first
 
     # =========================================================
-    # НЕГАТИВНЫЕ ТЕСТЫ
+    # ОТРИЦАТЕЛЬНЫЕ ТЕСТЫ
     # =========================================================
 
     @allure.story("Создание сотрудника")
     @allure.title("Создание сотрудника без обязательного поля (name)")
     @allure.severity(allure.severity_level.NORMAL)
     def test_create_employee_missing_name(self, api_client):
-        """Негативный тест: отсутствует поле name"""
+        """Отрицательный тест: отсутствует поле name"""
         data = {
             "email": "test@example.com",
             "position": "Developer",
@@ -164,7 +155,7 @@ class TestEmployees:
     @allure.title("Создание сотрудника с salary = 0")
     @allure.severity(allure.severity_level.NORMAL)
     def test_create_employee_salary_zero(self, api_client):
-        """Негативный тест: salary = 0 (должно быть > 0)"""
+        """Отрицательный тест: salary = 0 (должно быть > 0)"""
         data = {
             "name": "Тест Тестов",
             "email": "test@example.com",
@@ -180,7 +171,7 @@ class TestEmployees:
     @allure.title("Получение несуществующего сотрудника")
     @allure.severity(allure.severity_level.NORMAL)
     def test_get_employee_not_found(self, api_client):
-        """Негативный тест: несуществующий ID"""
+        """Отрицательный тест: несуществующий ID"""
         response = api_client.get("/api/employees/999999")
         assert response.status_code == 404
 
@@ -188,6 +179,6 @@ class TestEmployees:
     @allure.title("Удаление несуществующего сотрудника")
     @allure.severity(allure.severity_level.NORMAL)
     def test_delete_employee_not_found(self, api_client):
-        """Негативный тест: удаление несуществующего ID"""
+        """Отрицательный: удаление несуществующего ID"""
         response = api_client.delete("/api/employees/999999")
         assert response.status_code == 404
